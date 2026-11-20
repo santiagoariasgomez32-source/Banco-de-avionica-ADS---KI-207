@@ -15,7 +15,7 @@
     "LiquidCrystal I2C" (Frank de Brabander)   y   "U8g2" (olikraus)
   Si tu OLED fuera SH1106, cambia la linea del constructor U8G2 (abajo).
   ---------------------------------------------------------------
-  LCD 16x2 (copia las ventanas del RMP):
+  LCD 16x2 (copia las ventanas del RMP):    
       113.900>108.600        ACTIVE > STBY      (en modo curso:  113.900>CRS 109)
       BOG    FROM R109       estacion, bandera, radial recibido
 
@@ -234,6 +234,13 @@ int nLineaRx = 0;
 unsigned long tHeartbeat = 0;
 unsigned long tRefresco = 0;
 
+// ----- vigilancia de las pantallas (switch de alimentacion) -----
+const uint8_t OLED_ADDR = 0x3C;
+uint8_t dirLCD = 0x27;
+bool pantallasVivas = true;
+unsigned long tChequeoPantallas = 0;
+const unsigned long CHEQUEO_PANTALLAS_MS = 200;
+
 // ===================== UTILIDADES =====================
 const char* nombreEstacion(long khz) {
   for (int i = 0; i < N_PRESETS; i++)
@@ -325,6 +332,16 @@ bool procesarAds(char* linea) {
   return true;
 }
 
+// ---- Radial que se muestra como TEXTO (OLED/LCD) ----
+// El numero es el radial que llega del puente (el mismo dato con el que se mueve la aguja), mostrado
+// siempre como entero hacia abajo, sin suavizado ni histeresis: 115.7 -> 115, 116.0 -> 116.
+// Asi el numero y la aguja siempre cuentan lo mismo.
+int radialEntero = 0;
+
+void actualizarRadialTxt(float r) {
+  radialEntero = ((int)floorf(r) % 360 + 360) % 360;
+}
+
 // Linea: DEV,<dev>,FLAG,<flag>,RAD,<rad>[,CONS,<c>][,ID,<texto>]
 void procesarLinea(char* linea) {
   if (procesarEspectro(linea)) return;
@@ -341,6 +358,7 @@ void procesarLinea(char* linea) {
   devRx = atof(tok[1]);
   radialRx = atof(tok[5]);
   flagRx = f;
+  if (strcmp(f, "OFF") != 0) actualizarRadialTxt(radialRx);
   for (int i = 6; i + 1 < n; i += 2) {
     if (!strcmp(tok[i], "CONS") && esNumero(tok[i + 1])) {
       consRx = atof(tok[i + 1]);
@@ -411,7 +429,7 @@ void manejarBotones() {
   if (ev2 == EV_CORTO) {
     if (modo == MODO_CURSO) {
       if (senalValida()) {
-        curso = ((int)lroundf(radialRx)) % 360;
+        curso = radialEntero;
         if (curso < 0) curso += 360;
         cursoPendiente = true;
       }
@@ -473,7 +491,7 @@ void dibujarLCD() {
     imprimirLinea(1, "SIN PC (puente?)");
     return;
   }
-  if (valido) snprintf(radTxt, sizeof(radTxt), "%03d", ((int)lroundf(radialRx)) % 360);
+  if (valido) snprintf(radTxt, sizeof(radTxt), "%03d", radialEntero);
   else strcpy(radTxt, "---");
   snprintf(l1, sizeof(l1), "%-6s %-4s R%s", nombreEstacion(freqActiva), flagRx.c_str(), radTxt);
   imprimirLinea(1, l1);
@@ -550,7 +568,7 @@ void paginaHSI() {
   u8g2.setFont(u8g2_font_6x12_tr);
   snprintf(buf, sizeof(buf), "CRS %03d", curso);
   u8g2.drawStr(66, 28, buf);
-  if (valido) snprintf(buf, sizeof(buf), "RAD %03d", ((int)lroundf(radialRx)) % 360);
+  if (valido) snprintf(buf, sizeof(buf), "RAD %03d", radialEntero);
   else snprintf(buf, sizeof(buf), "RAD ---");
   u8g2.drawStr(66, 41, buf);
   u8g2.setFont(u8g2_font_helvB10_tr);
@@ -578,13 +596,13 @@ void paginaRadiales() {
   u8g2.setFont(u8g2_font_6x10_tr);
   u8g2.drawStr(66, 10, "RADIAL");
   u8g2.setFont(u8g2_font_helvB14_tn);
-  if (valido) snprintf(buf, sizeof(buf), "%03d", ((int)lroundf(radialRx)) % 360);
+  if (valido) snprintf(buf, sizeof(buf), "%03d", radialEntero);
   else snprintf(buf, sizeof(buf), "---");
   u8g2.drawStr(66, 29, buf);
   u8g2.setFont(u8g2_font_6x12_tr);
   snprintf(buf, sizeof(buf), "CURSO %03d", curso);
   u8g2.drawStr(66, 44, buf);
-  if (valido) snprintf(buf, sizeof(buf), "DIF %+d", (int)lroundf(difAng(radialRx, curso)));
+  if (valido) snprintf(buf, sizeof(buf), "DIF %+d", (int)lroundf(difAng((float)radialEntero, curso)));
   else snprintf(buf, sizeof(buf), "DIF ---");
   u8g2.drawStr(66, 58, buf);
 }
@@ -758,6 +776,34 @@ void dibujarOLED() {
   u8g2.sendBuffer();
 }
 
+// ===================== VIGILANCIA DE PANTALLAS =====================
+bool respondeI2C(uint8_t dir) {
+  Wire.beginTransmission(dir);
+  return Wire.endTransmission() == 0;
+}
+
+void iniciarPantallas() {
+  u8g2.initDisplay();
+  u8g2.setPowerSave(0);
+  lcd->init();
+  lcd->backlight();
+  lcd->clear();
+}
+
+// Detecta cuando las pantallas pierden y recuperan la energia y las reinicia
+void vigilarPantallas() {
+  unsigned long ahora = millis();
+  if (ahora - tChequeoPantallas < CHEQUEO_PANTALLAS_MS) return;
+  tChequeoPantallas = ahora;
+
+  bool viva = respondeI2C(dirLCD) && respondeI2C(OLED_ADDR);
+  if (viva && !pantallasVivas) {
+    delay(150);               // dejar que las pantallas arranquen
+    iniciarPantallas();
+  }
+  pantallasVivas = viva;
+}
+
 // ===================== SETUP / LOOP =====================
 void setup() {
   Serial.setRxBufferSize(1024);   // las lineas de espectro son largas (~135 bytes)
@@ -780,6 +826,7 @@ void setup() {
   u8g2.sendBuffer();
 
   uint8_t dir = detectarDireccionLCD();
+  dirLCD = dir;
   lcd = new LiquidCrystal_I2C(dir, LCD_COLS, LCD_ROWS);
   lcd->init();
   lcd->backlight();
@@ -833,7 +880,9 @@ void loop() {
     histIdx = (histIdx + 1) % HIST_N;
   }
 
-  if (ahora - tRefresco >= REFRESCO_MS) {
+  vigilarPantallas();
+
+  if (pantallasVivas && ahora - tRefresco >= REFRESCO_MS) {
     tRefresco = ahora;
     dibujarLCD();
     dibujarOLED();

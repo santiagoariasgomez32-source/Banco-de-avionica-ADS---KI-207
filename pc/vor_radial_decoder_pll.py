@@ -4,8 +4,7 @@ vor_radial_decoder_pll.py — La versión "de producción": combina la
 cadena de PLL ya validada (consistencia 0.9+ con la estación BOG) con
 salida UDP nativa (sin bloques Python personalizados) hacia el puente
 vor_udp_bridge.py, y aplica la calibración directamente en el
-flowgraph (offset de 270° por defecto, con el sentido de fase invertido, que es la
-calibración final del proyecto; se cambia con --offset y --no-invert).
+flowgraph (resta de 228.6° por defecto).
 
 Tambien regenera el identificador Morse (tono de 700 Hz solo cuando hay
 ident, sin silbidos) y manda su envolvente por UDP (puerto 6008) a
@@ -23,6 +22,8 @@ import time
 
 import numpy as np
 
+T_INICIO = time.time()   # para imprimir el tiempo transcurrido desde que arranco el decodificador
+
 from gnuradio import gr, blocks, filter as gr_filter, analog, network, audio
 from gnuradio.fft import window
 import osmosdr
@@ -31,11 +32,11 @@ import osmosdr
 class VorPllTopBlock(gr.top_block):
     def __init__(self, device_args, freq_hz, udp_port,
                  rf_gain=49.6, if_gain=40, bb_gain=20,
-                 var_loop_bw_hz=3.0, ref_loop_bw_hz=300.0, offset_deg=270.0,
+                 var_loop_bw_hz=3.0, ref_loop_bw_hz=300.0, offset_deg=228.6,
                  ident_port=6008, ident_low=0.000067, ident_high=0.0001,
                  ident_hold=3000, ident_on=0.45, ident_off=0.15,
                  volume=0.3, audio_on=True, ident_gain=1.0, debug_rf=False, spectrum=True,
-                 invert_phase=True):
+                 invert_phase=False, ppm=0.0, dump_prefix=None):
         gr.top_block.__init__(self, "VOR Radial PLL - Producción")
 
         self.samp_rate_rf = 1_200_000   # igual que el GRC (1.2 MS/s; /12 = 100 kHz)
@@ -44,6 +45,9 @@ class VorPllTopBlock(gr.top_block):
         self.src = osmosdr.source(args=f"numchan=1 {device_args}")
         self.src.set_sample_rate(self.samp_rate_rf)
         self.src.set_center_freq(freq_hz)
+        if ppm:
+            # correccion del error del cristal del RTL-SDR (partes por millon)
+            self.src.set_freq_corr(ppm, 0)
         self.src.set_gain_mode(False)
         # Mismas llamadas que genera GNU Radio Companion (el nombre "RF" no
         # existe en el RTL-SDR y dejaba la ganancia real mucho mas baja).
@@ -206,7 +210,26 @@ class VorPllTopBlock(gr.top_block):
         else:
             self.connect(self.var_pll, (self.mult_conj, 0))
             self.connect(self.ref_pll, (self.mult_conj, 1))
-        self.connect(self.mult_conj, self.c2arg, self.rad2deg, self.calibrar, self.keep_post, self.udp)
+        # Los PLL dejan un rizado de fase de 60 Hz (y multiplos) de unos +-5 grados. Antes se tomaba UNA
+        # muestra cada 5000 (20 por segundo): el rizado, un poco desfasado de esa rejilla de 20 Hz,
+        # aparecia como un vaivén lento de ~13 grados cada 7-8 minutos. Ahora se promedia el fasor
+        # sobre 5000 muestras (0.05 s = 3 ciclos exactos de 60 Hz) ANTES de submuestrear.
+        self.prom_fase = blocks.moving_average_cc(self.samp_rate_env // 20, 1.0 / (self.samp_rate_env // 20), 4000)
+        self.keep_fase = blocks.keep_one_in_n(gr.sizeof_gr_complex, self.samp_rate_env // 20)
+        self.connect(self.mult_conj, self.prom_fase, self.keep_fase, self.c2arg, self.rad2deg, self.calibrar, self.udp)
+
+        # --- diagnostico: guarda a 500 muestras/s las senales de 30 Hz ANTES y DESPUES de los PLL ---
+        # (var_bp = 30 Hz AM, ref_bp2 = 30 Hz demodulados del FM de 9960 Hz, y la salida compleja de cada PLL)
+        if dump_prefix:
+            n = self.samp_rate_env // 500
+            for nombre, bloque, tam in (("var_30hz", self.var_bp, gr.sizeof_float),
+                                        ("ref_30hz", self.ref_bp2, gr.sizeof_float),
+                                        ("var_pll", self.var_pll, gr.sizeof_gr_complex),
+                                        ("ref_pll", self.ref_pll, gr.sizeof_gr_complex)):
+                k = blocks.keep_one_in_n(tam, n)
+                f = blocks.file_sink(tam, f"{dump_prefix}_{nombre}.bin", False)
+                f.set_unbuffered(False)
+                self.connect(bloque, k, f)
 
     def set_freq(self, freq_hz):
         self.src.set_center_freq(freq_hz)
@@ -270,15 +293,25 @@ class EspectroPanel:
             db = 10.0 * np.log10(self.acc_c / self.n_c + 1e-20)
             # +-640 bins (+-15.6 kHz) -> 128 columnas de 10 bins (se queda el maximo de cada grupo)
             seg = db[2048 - 640:2048 + 640].reshape(self.COLS, 10).max(axis=1)
-            # C/N: portadora (maximo en +-120 Hz) contra la mediana del ruido entre 2 y 15 kHz
-            portadora = float(db[2048 - 5:2048 + 6].max())
+            # C/N: portadora (maximo en +-12 kHz, por si el SDR esta descentrado) contra la mediana
+            # del ruido entre 2 y 15 kHz
+            rango = db[2048 - 492:2048 + 493]
+            k_max = int(np.argmax(rango)) - 492
+            off_hz = k_max * (100000.0 / 4096)
+            portadora = float(rango.max())
             f = np.abs(np.arange(4096) - 2048) * (100000.0 / 4096)
             ruido = float(np.median(db[(f > 2000.0) & (f < 15000.0)]))
             self.ultimo_cn = portadora - ruido
             msg = f"SPC,{int(round(self.ultimo_cn))},{self._texto(self._nivel(seg))}\n"
             self.sock.sendto(msg.encode("ascii"), self.addr)
             if self.debug and ahora - self.t_dbg >= 3.0:
-                print(f"[espectro] portadora {portadora:.1f} dBFS | ruido {ruido:.1f} dBFS | C/N {self.ultimo_cn:.1f} dB")
+                try:
+                    ppm_med = off_hz / float(self.tb.src.get_center_freq()) * 1e6
+                except Exception:
+                    ppm_med = 0.0
+                _seg = int(time.time() - T_INICIO)
+                print(f"[{_seg // 60:02d}:{_seg % 60:02d} {time.strftime('%H:%M:%S')}] [espectro] portadora {portadora:.1f} dBFS | ruido {ruido:.1f} dBFS | C/N {self.ultimo_cn:.1f} dB | "
+                      f"portadora a {off_hz:+.0f} Hz del centro ({ppm_med:+.1f} ppm)")
                 self.t_dbg = ahora
         if self.n_w > 0:
             db = 10.0 * np.log10(self.acc_w / self.n_w + 1e-20)
@@ -335,11 +368,10 @@ def main():
     ap.add_argument("--rf-gain", type=float, default=49.6)
     ap.add_argument("--if-gain", type=float, default=40.0)
     ap.add_argument("--bb-gain", type=float, default=20.0)
-    ap.add_argument("--offset", type=float, default=270.0,
-                    help="offset de calibracion en grados (depende del sitio de la antena)")
-    ap.add_argument("--invert", action=argparse.BooleanOptionalAction, default=True,
-                    help="sentido de la resta de fase (radial = fase_ref - fase_var). Activo por defecto; "
-                         "--no-invert lo desactiva y obliga a recalibrar --offset")
+    ap.add_argument("--offset", type=float, default=228.6)
+    ap.add_argument("--invert", action="store_true",
+                    help="invierte el sentido de la resta de fase (radial = fase_ref - fase_var). "
+                         "Hay que recalibrar --offset al usarlo")
     ap.add_argument("--var-bw", type=float, default=3.0,
                     help="ancho de banda (Hz) del PLL de 30 Hz variable: menor = radial mas estable pero engancha mas lento")
     ap.add_argument("--ref-bw", type=float, default=300.0, help="ancho de banda (Hz) del PLL de la referencia FM")
@@ -364,6 +396,10 @@ def main():
     ap.add_argument("--ident-hold", type=int, default=3000, help="largo del promedio movil (muestras a 48 kHz)")
     ap.add_argument("--ident-on", type=float, default=0.45, help="Threshold 2: umbral alto")
     ap.add_argument("--ident-off", type=float, default=0.15, help="Threshold 2: umbral bajo")
+    ap.add_argument("--ppm", type=float, default=0.0,
+                    help="correccion de frecuencia del RTL-SDR en ppm (usa --debug-spec para ver cuanto esta descentrada la portadora)")
+    ap.add_argument("--dump-30hz", default=None, metavar="PREFIJO",
+                    help="diagnostico: guarda las senales de 30 Hz (antes y despues de los PLL, 500 muestras/s) en PREFIJO_*.bin")
     args = ap.parse_args()
 
     tb = VorPllTopBlock(
@@ -374,7 +410,8 @@ def main():
         ident_port=args.ident_port, ident_low=args.ident_low, ident_high=args.ident_high,
         ident_hold=args.ident_hold, ident_on=args.ident_on, ident_off=args.ident_off,
         volume=args.volume, audio_on=not args.no_audio, ident_gain=args.ident_gain,
-        debug_rf=args.debug_rf, spectrum=not args.no_spectrum, invert_phase=args.invert,
+        debug_rf=args.debug_rf, spectrum=not args.no_spectrum, invert_phase=args.invert, ppm=args.ppm,
+        dump_prefix=args.dump_30hz,
     )
     tb.start()
     print(f"Corriendo. Mandando radial calibrado por UDP a 127.0.0.1:{args.udp_port}")

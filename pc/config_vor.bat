@@ -26,12 +26,12 @@ set FRECUENCIA_HZ=113900000
 
 REM --- Decodificador VOR -------------------------------------------------
 REM --offset : offset de calibracion en grados. DEPENDE DEL SITIO de la antena
-REM            (270 fue el valor obtenido en las pruebas del proyecto).
+REM            (263.9 fue el valor obtenido en las pruebas finales del proyecto).
 REM            Debe recalcularse si la antena cambia de lugar.
 REM --invert : sentido de la resta de fase (activo por defecto; calibracion final).
 REM Ganancias: con 49.6/40 el SDR se satura; 40/30 queda limpio.
 REM --ident-gain compensa el nivel mas bajo para la compuerta del audio del identificador.
-set OPC_SDR=--invert --offset 270 --rf-gain 40 --if-gain 30 --ident-gain 2.5
+set OPC_SDR=--invert --offset 263.9 --rf-gain 40 --if-gain 30 --ident-gain 2.5
 
 REM --- Opciones extra del puente (identificador Morse, suavizado) --------
 REM Ejemplo: --ident-k-on 4 --ident-bridge-ms 60

@@ -1,0 +1,757 @@
+Panel en COM6, KI-207 en COM3
+Espectro para el OLED: escuchando UDP 6009
+Identificador Morse: escuchando envolvente en UDP 6008
+Escuchando radial en UDP 127.0.0.1:6006. Ctrl+C para salir.
+[00:01 12:46:48] radial=  0.0° (crudo   0.0°) cons=0.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:02 12:46:49] radial=  0.0° (crudo   0.0°) cons=0.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[Panel] Frecuencia: 113.900 MHz -> retonalizando SDR
+[Panel] Curso: 0°
+[00:03 12:46:51] radial=  0.0° (crudo   0.0°) cons=0.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:04 12:46:52] radial=  0.0° (crudo   0.0°) cons=0.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:05 12:46:53] radial=  0.0° (crudo   0.0°) cons=0.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:06 12:46:54] radial=  0.0° (crudo   0.0°) cons=0.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[Panel] Curso: 0°
+[00:07 12:46:55] radial=  0.0° (crudo   0.0°) cons=0.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:08 12:46:56] radial=107.1° (crudo 107.1°) cons=1.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:10 12:46:58] radial=106.8° (crudo 106.8°) cons=1.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:11 12:46:59] radial=106.0° (crudo 106.0°) cons=1.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:12 12:47:00] radial=106.4° (crudo 106.4°) cons=1.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[Panel] Curso: 0°
+[00:13 12:47:01] radial=106.0° (crudo 106.0°) cons=1.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[00:14 12:47:02] radial=106.8° (crudo 106.8°) cons=1.00 curso=0° -> OFF (enganchando tras cambio de frecuencia)
+[Ident] HOG  .... --- --.  (10 tonos)
+[00:16 12:47:03] radial=105.8° (crudo 105.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[00:16 12:47:04] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[Panel] Curso: 0°
+[00:18 12:47:06] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[00:19 12:47:07] radial=105.9° (crudo 105.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[00:20 12:47:08] radial=105.5° (crudo 105.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[00:21 12:47:09] radial=105.7° (crudo 105.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[Panel] Curso: 0°
+[00:22 12:47:10] radial=106.6° (crudo 106.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[00:24 12:47:12] radial=105.4° (crudo 105.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[00:25 12:47:13] radial=105.2° (crudo 105.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[00:26 12:47:14] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[00:27 12:47:15] radial=105.3° (crudo 105.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[Panel] Curso: 0°
+[00:28 12:47:16] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID HOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[00:30 12:47:17] radial=105.9° (crudo 105.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:31 12:47:19] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:32 12:47:20] radial=106.2° (crudo 106.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[00:33 12:47:21] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:34 12:47:22] radial=105.7° (crudo 105.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:35 12:47:23] radial=106.7° (crudo 106.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:37 12:47:25] radial=105.3° (crudo 105.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[00:38 12:47:26] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:39 12:47:27] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:40 12:47:28] radial=107.1° (crudo 107.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:41 12:47:29] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[00:42 12:47:30] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[00:44 12:47:32] radial=106.7° (crudo 106.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BXG  -... -..- --.  (11 tonos)
+[00:45 12:47:33] radial=106.8° (crudo 106.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:46 12:47:34] radial=106.2° (crudo 106.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:47 12:47:35] radial=105.4° (crudo 105.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[Panel] Curso: 0°
+[00:48 12:47:36] radial=105.3° (crudo 105.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:49 12:47:37] radial=105.9° (crudo 105.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:50 12:47:38] radial=105.9° (crudo 105.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:52 12:47:40] radial=105.8° (crudo 105.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[Panel] Curso: 0°
+[00:53 12:47:41] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:54 12:47:42] radial=106.2° (crudo 106.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:55 12:47:43] radial=106.6° (crudo 106.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:56 12:47:44] radial=104.1° (crudo 104.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[00:57 12:47:45] radial=106.0° (crudo 106.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[Panel] Curso: 0°
+[00:58 12:47:46] radial=105.9° (crudo 105.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BXG
+[Ident] BOG  -... --- --.  (10 tonos)
+[00:59 12:47:47] radial=105.4° (crudo 105.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:00 12:47:48] radial=105.4° (crudo 105.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:00 12:47:48] [calidad 60 s] consistencia media 1.00 (min 1.00) | radial crudo medio 106.0° | dispersion ±0.5° | segundos validos 40/40 | ident: pico/ruido 26.7 (ruido 1.1e-05, pico 2.9e-04)
+[01:02 12:47:50] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:03 12:47:51] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:04 12:47:52] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:05 12:47:53] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:06 12:47:54] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[01:07 12:47:55] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:09 12:47:57] radial=104.8° (crudo 104.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:10 12:47:58] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:11 12:47:59] radial=104.6° (crudo 104.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:12 12:48:00] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:13 12:48:01] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[01:14 12:48:02] radial=104.6° (crudo 104.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:16 12:48:04] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:17 12:48:05] radial=104.0° (crudo 104.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:18 12:48:06] radial=105.1° (crudo 105.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:19 12:48:07] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:20 12:48:08] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:21 12:48:09] radial=103.6° (crudo 103.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:22 12:48:10] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:24 12:48:12] radial=105.2° (crudo 105.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:25 12:48:13] radial=104.3° (crudo 104.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:26 12:48:14] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:27 12:48:15] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:28 12:48:16] radial=104.4° (crudo 104.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[01:29 12:48:17] radial=104.5° (crudo 104.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:31 12:48:19] radial=103.5° (crudo 103.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:32 12:48:20] radial=103.4° (crudo 103.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:33 12:48:21] radial=103.7° (crudo 103.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:34 12:48:22] radial=103.5° (crudo 103.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:35 12:48:23] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:36 12:48:24] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[01:38 12:48:26] radial=103.6° (crudo 103.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:39 12:48:27] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:40 12:48:28] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:41 12:48:29] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:42 12:48:30] radial=104.5° (crudo 104.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:43 12:48:31] radial=103.7° (crudo 103.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[01:44 12:48:32] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:46 12:48:33] radial=104.0° (crudo 104.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:47 12:48:35] radial=103.2° (crudo 103.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:48 12:48:36] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:49 12:48:37] radial=103.9° (crudo 103.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:50 12:48:38] radial=103.7° (crudo 103.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:51 12:48:39] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:52 12:48:40] radial=103.9° (crudo 103.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:54 12:48:42] radial=104.0° (crudo 104.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:55 12:48:43] radial=103.7° (crudo 103.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:56 12:48:44] radial=104.3° (crudo 104.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[01:57 12:48:45] radial=104.0° (crudo 104.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[01:58 12:48:46] radial=104.5° (crudo 104.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[01:59 12:48:47] radial=104.3° (crudo 104.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:00 12:48:48] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:02 12:48:50] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:02 12:48:50] [calidad 60 s] consistencia media 1.00 (min 1.00) | radial crudo medio 104.3° | dispersion ±0.5° | segundos validos 53/53 | ident: pico/ruido 24.9 (ruido 1.1e-05, pico 2.7e-04)
+[Panel] Curso: 0°
+[02:03 12:48:51] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:04 12:48:52] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:05 12:48:53] radial=105.7° (crudo 105.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:06 12:48:54] radial=105.6° (crudo 105.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[02:07 12:48:55] radial=106.4° (crudo 106.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:09 12:48:57] radial=106.6° (crudo 106.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:10 12:48:58] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:11 12:48:59] radial=107.1° (crudo 107.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:12 12:49:00] radial=107.0° (crudo 107.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[02:13 12:49:01] radial=108.2° (crudo 108.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[02:14 12:49:02] radial=107.2° (crudo 107.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:16 12:49:04] radial=108.4° (crudo 108.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:17 12:49:05] radial=108.5° (crudo 108.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[02:18 12:49:06] radial=108.9° (crudo 108.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:19 12:49:07] radial=108.7° (crudo 108.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:20 12:49:08] radial=109.2° (crudo 109.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:21 12:49:09] radial=109.1° (crudo 109.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:22 12:49:10] radial=109.2° (crudo 109.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[02:24 12:49:11] radial=109.9° (crudo 109.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:25 12:49:12] radial=110.1° (crudo 110.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:26 12:49:14] radial=109.9° (crudo 109.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:27 12:49:15] radial=110.4° (crudo 110.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[02:28 12:49:16] radial=111.7° (crudo 111.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:29 12:49:17] radial=111.4° (crudo 111.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOM  -... --- --  (9 tonos)
+[02:30 12:49:18] radial=110.2° (crudo 110.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOM
+[02:31 12:49:19] radial=110.5° (crudo 110.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOM
+[Panel] Curso: 0°
+[02:33 12:49:21] radial=113.1° (crudo 113.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOM
+[02:34 12:49:22] radial=110.7° (crudo 110.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOM
+[02:35 12:49:23] radial=112.6° (crudo 112.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOM
+[02:36 12:49:24] radial=114.0° (crudo 114.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOM
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[02:37 12:49:25] radial=111.7° (crudo 111.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:38 12:49:26] radial=112.8° (crudo 112.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:40 12:49:28] radial=113.9° (crudo 113.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:41 12:49:29] radial=114.3° (crudo 114.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:42 12:49:30] radial=113.9° (crudo 113.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[02:43 12:49:31] radial=114.8° (crudo 114.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[02:44 12:49:32] radial=114.3° (crudo 114.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:45 12:49:33] radial=114.0° (crudo 114.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:47 12:49:35] radial=115.1° (crudo 115.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[02:48 12:49:36] radial=115.0° (crudo 115.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:49 12:49:37] radial=114.6° (crudo 114.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:50 12:49:38] radial=114.9° (crudo 114.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:51 12:49:39] radial=116.0° (crudo 116.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[02:53 12:49:41] radial=115.3° (crudo 115.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:54 12:49:42] radial=115.3° (crudo 115.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:55 12:49:43] radial=117.0° (crudo 117.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:56 12:49:44] radial=115.7° (crudo 115.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[02:57 12:49:45] radial=115.9° (crudo 115.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[02:58 12:49:46] radial=117.0° (crudo 117.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[02:59 12:49:47] radial=116.6° (crudo 116.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:01 12:49:49] radial=117.6° (crudo 117.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:02 12:49:50] radial=117.2° (crudo 117.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:02 12:49:50] [calidad 60 s] consistencia media 1.00 (min 1.00) | radial crudo medio 111.6° | dispersion ±3.6° | segundos validos 52/52 | ident: pico/ruido 28.9 (ruido 1.1e-05, pico 3.1e-04)
+[Panel] Curso: 0°
+[03:03 12:49:51] radial=117.9° (crudo 117.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:04 12:49:52] radial=114.6° (crudo 114.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:05 12:49:53] radial=117.7° (crudo 117.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:06 12:49:54] radial=118.5° (crudo 118.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[03:08 12:49:56] radial=117.0° (crudo 117.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:09 12:49:57] radial=116.2° (crudo 116.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:10 12:49:58] radial=115.4° (crudo 115.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:11 12:49:59] radial=117.1° (crudo 117.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:12 12:50:00] radial=117.8° (crudo 117.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:13 12:50:01] radial=117.0° (crudo 117.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[03:14 12:50:02] radial=115.8° (crudo 115.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:16 12:50:04] radial=117.3° (crudo 117.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:17 12:50:05] radial=116.0° (crudo 116.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:18 12:50:06] radial=116.2° (crudo 116.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:19 12:50:07] radial=116.6° (crudo 116.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:20 12:50:08] radial=116.0° (crudo 116.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:21 12:50:09] radial=117.5° (crudo 117.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:23 12:50:10] radial=116.6° (crudo 116.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:24 12:50:12] radial=115.1° (crudo 115.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:25 12:50:13] radial=116.3° (crudo 116.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:26 12:50:14] radial=115.2° (crudo 115.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:27 12:50:15] radial=115.8° (crudo 115.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:28 12:50:16] radial=115.7° (crudo 115.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[03:29 12:50:17] radial=117.4° (crudo 117.4°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[03:30 12:50:18] radial=115.8° (crudo 115.8°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[03:32 12:50:20] radial=116.5° (crudo 116.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:33 12:50:21] radial=116.8° (crudo 116.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:34 12:50:22] radial=113.6° (crudo 113.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:35 12:50:23] radial=115.3° (crudo 115.3°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[03:36 12:50:24] radial=116.0° (crudo 116.0°) cons=0.97 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[03:37 12:50:25] radial=115.9° (crudo 115.9°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:38 12:50:26] radial=116.5° (crudo 116.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:40 12:50:28] radial=115.6° (crudo 115.6°) cons=0.98 curso=0° -> TO dev=-1.00 | ID BOG
+[03:41 12:50:29] radial=114.9° (crudo 114.9°) cons=0.98 curso=0° -> TO dev=-1.00 | ID BOG
+[03:42 12:50:30] radial=117.2° (crudo 117.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:43 12:50:31] radial=117.5° (crudo 117.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:44 12:50:32] radial=116.0° (crudo 116.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[03:45 12:50:33] radial=116.2° (crudo 116.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:46 12:50:34] radial=116.6° (crudo 116.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:47 12:50:35] radial=116.6° (crudo 111.6°) cons=0.99 curso=0° -> TO dev=-1.00 [salto descartado] | ID BOG
+[03:49 12:50:36] radial=116.0° (crudo 116.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:50 12:50:38] radial=115.3° (crudo 115.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:51 12:50:39] radial=115.3° (crudo 119.8°) cons=0.92 curso=0° -> TO dev=-1.00 [salto descartado] | ID BOG
+[03:52 12:50:40] radial=115.6° (crudo 115.6°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:53 12:50:41] radial=116.3° (crudo 116.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:54 12:50:42] radial=115.8° (crudo 115.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:55 12:50:43] radial=115.8° (crudo 115.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:57 12:50:45] radial=115.8° (crudo 115.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[03:58 12:50:46] radial=115.0° (crudo 115.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[03:59 12:50:47] radial=115.5° (crudo 115.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[04:00 12:50:48] radial=115.3° (crudo 115.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:01 12:50:49] radial=114.4° (crudo 114.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:02 12:50:50] radial=114.9° (crudo 114.9°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[04:02 12:50:50] [calidad 60 s] consistencia media 0.99 (min 0.92) | radial crudo medio 116.1° | dispersion ±1.2° | segundos validos 53/53 | ident: pico/ruido 28.7 (ruido 1.0e-05, pico 3.0e-04)
+[04:04 12:50:52] radial=112.9° (crudo 112.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:05 12:50:53] radial=115.1° (crudo 115.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:06 12:50:54] radial=115.9° (crudo 115.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[04:07 12:50:55] radial=114.5° (crudo 114.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:08 12:50:56] radial=115.1° (crudo 115.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:09 12:50:57] radial=116.0° (crudo 116.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:11 12:50:59] radial=115.1° (crudo 115.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:12 12:51:00] radial=114.9° (crudo 114.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:13 12:51:01] radial=114.6° (crudo 114.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:14 12:51:02] radial=114.4° (crudo 114.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[04:15 12:51:03] radial=113.9° (crudo 113.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:16 12:51:04] radial=113.2° (crudo 113.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:18 12:51:06] radial=113.9° (crudo 113.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:19 12:51:07] radial=114.3° (crudo 114.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:20 12:51:08] radial=114.0° (crudo 114.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:21 12:51:09] radial=115.4° (crudo 115.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:22 12:51:10] radial=114.5° (crudo 114.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:23 12:51:11] radial=114.5° (crudo 114.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:24 12:51:12] radial=115.6° (crudo 115.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:25 12:51:13] radial=112.5° (crudo 112.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:26 12:51:14] radial=115.1° (crudo 115.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:28 12:51:16] radial=114.6° (crudo 114.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:29 12:51:17] radial=114.3° (crudo 114.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[04:30 12:51:18] radial=114.2° (crudo 114.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:31 12:51:19] radial=114.6° (crudo 114.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:32 12:51:20] radial=114.4° (crudo 114.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:33 12:51:21] radial=114.7° (crudo 114.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:34 12:51:22] radial=114.6° (crudo 114.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:36 12:51:24] radial=114.3° (crudo 114.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[04:37 12:51:25] radial=115.2° (crudo 115.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:38 12:51:26] radial=113.8° (crudo 113.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:39 12:51:27] radial=115.3° (crudo 115.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:40 12:51:28] radial=114.5° (crudo 114.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:42 12:51:29] radial=115.1° (crudo 115.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:43 12:51:31] radial=114.5° (crudo 114.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:44 12:51:32] radial=114.8° (crudo 114.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[04:45 12:51:33] radial=114.2° (crudo 114.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:46 12:51:34] radial=115.5° (crudo 115.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:47 12:51:35] radial=115.8° (crudo 115.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:49 12:51:37] radial=113.9° (crudo 113.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:50 12:51:38] radial=114.9° (crudo 114.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:51 12:51:39] radial=113.7° (crudo 113.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:52 12:51:40] radial=114.4° (crudo 114.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:53 12:51:41] radial=113.0° (crudo 113.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:54 12:51:42] radial=114.0° (crudo 114.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:56 12:51:44] radial=113.5° (crudo 113.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:57 12:51:45] radial=113.5° (crudo 113.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[04:58 12:51:46] radial=114.5° (crudo 114.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[04:59 12:51:47] radial=112.3° (crudo 112.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[05:00 12:51:48] radial=113.1° (crudo 113.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:01 12:51:49] radial=112.9° (crudo 112.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:03 12:51:51] radial=113.0° (crudo 113.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:03 12:51:51] [calidad 60 s] consistencia media 1.00 (min 1.00) | radial crudo medio 114.4° | dispersion ±0.9° | segundos validos 52/52 | ident: pico/ruido 25.0 (ruido 9.3e-06, pico 2.3e-04)
+[05:04 12:51:52] radial=113.1° (crudo 113.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:05 12:51:53] radial=113.1° (crudo 113.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:06 12:51:54] radial=112.4° (crudo 112.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] descartado: ?G -...--- --. (10 tonos)
+[05:07 12:51:55] radial=112.0° (crudo 112.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:08 12:51:56] radial=113.5° (crudo 113.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:10 12:51:58] radial=114.0° (crudo 114.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:11 12:51:59] radial=113.4° (crudo 113.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:12 12:52:00] radial=113.2° (crudo 113.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:13 12:52:01] radial=112.5° (crudo 112.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:14 12:52:02] radial=112.6° (crudo 112.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[05:15 12:52:03] radial=112.4° (crudo 112.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:16 12:52:04] radial=112.1° (crudo 112.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:18 12:52:05] radial=111.8° (crudo 111.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:19 12:52:06] radial=111.5° (crudo 111.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:20 12:52:08] radial=112.0° (crudo 112.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:21 12:52:09] radial=112.6° (crudo 112.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:22 12:52:10] radial=112.9° (crudo 112.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:23 12:52:11] radial=113.1° (crudo 113.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:24 12:52:12] radial=112.7° (crudo 112.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:25 12:52:13] radial=111.7° (crudo 111.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:27 12:52:15] radial=113.4° (crudo 113.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:28 12:52:16] radial=112.6° (crudo 112.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:29 12:52:17] radial=111.9° (crudo 111.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[05:30 12:52:18] radial=113.1° (crudo 113.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:31 12:52:19] radial=113.1° (crudo 113.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:33 12:52:20] radial=112.4° (crudo 112.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:34 12:52:22] radial=111.3° (crudo 111.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:35 12:52:23] radial=112.2° (crudo 112.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:36 12:52:24] radial=112.3° (crudo 112.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[05:37 12:52:25] radial=111.3° (crudo 111.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:38 12:52:26] radial=112.4° (crudo 112.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:39 12:52:27] radial=112.0° (crudo 112.0°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[05:41 12:52:29] radial=112.1° (crudo 112.1°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[05:42 12:52:30] radial=111.8° (crudo 111.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:43 12:52:31] radial=111.6° (crudo 111.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:44 12:52:32] radial=113.6° (crudo 113.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[05:45 12:52:33] radial=111.9° (crudo 111.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:46 12:52:34] radial=112.9° (crudo 112.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:48 12:52:36] radial=110.2° (crudo 110.2°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[05:49 12:52:37] radial=111.7° (crudo 111.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:50 12:52:38] radial=111.7° (crudo 111.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:51 12:52:39] radial=110.8° (crudo 110.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:52 12:52:40] radial=110.7° (crudo 110.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:54 12:52:42] radial=111.9° (crudo 111.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:55 12:52:43] radial=112.0° (crudo 112.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:56 12:52:44] radial=111.5° (crudo 111.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[05:57 12:52:45] radial=110.8° (crudo 110.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[05:58 12:52:46] radial=111.6° (crudo 111.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[05:59 12:52:47] radial=112.6° (crudo 112.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:01 12:52:49] radial=112.2° (crudo 112.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:02 12:52:50] radial=112.1° (crudo 112.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:03 12:52:51] radial=110.6° (crudo 110.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:03 12:52:51] [calidad 60 s] consistencia media 1.00 (min 0.99) | radial crudo medio 112.2° | dispersion ±0.8° | segundos validos 52/52 | ident: pico/ruido 32.5 (ruido 9.6e-06, pico 3.1e-04)
+[06:04 12:52:52] radial=110.4° (crudo 110.4°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[06:05 12:52:53] radial=112.3° (crudo 112.3°) cons=0.98 curso=0° -> TO dev=-1.00 | ID BOG
+[06:06 12:52:54] radial=111.2° (crudo 111.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] descartado: BTTEG -... - - . --. (10 tonos)
+[Panel] Curso: 0°
+[06:08 12:52:56] radial=110.1° (crudo 110.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:09 12:52:57] radial=112.0° (crudo 112.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:10 12:52:58] radial=110.4° (crudo 110.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:11 12:52:59] radial=110.4° (crudo 110.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:12 12:53:00] radial=111.1° (crudo 111.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:13 12:53:01] radial=110.7° (crudo 110.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] descartado: ETEIEE . - . .. . . (7 tonos)
+[06:14 12:53:02] radial=111.5° (crudo 111.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:15 12:53:03] radial=110.6° (crudo 110.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:16 12:53:04] radial=111.3° (crudo 111.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:18 12:53:06] radial=110.5° (crudo 110.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:19 12:53:07] radial=110.3° (crudo 110.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:20 12:53:08] radial=110.9° (crudo 110.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:21 12:53:09] radial=110.3° (crudo 110.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:22 12:53:10] radial=110.3° (crudo 110.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:23 12:53:11] radial=110.2° (crudo 110.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:25 12:53:13] radial=110.6° (crudo 110.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:26 12:53:14] radial=110.8° (crudo 110.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:27 12:53:15] radial=110.5° (crudo 110.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:28 12:53:16] radial=110.8° (crudo 110.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:29 12:53:17] radial=109.6° (crudo 109.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[06:30 12:53:18] radial=109.9° (crudo 109.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:32 12:53:20] radial=110.4° (crudo 110.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:33 12:53:21] radial=110.0° (crudo 110.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:34 12:53:22] radial=109.5° (crudo 109.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:35 12:53:23] radial=110.0° (crudo 110.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:36 12:53:24] radial=109.8° (crudo 109.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[06:37 12:53:25] radial=110.0° (crudo 110.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:38 12:53:26] radial=110.2° (crudo 110.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:39 12:53:27] radial=109.6° (crudo 109.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:40 12:53:28] radial=110.0° (crudo 110.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:41 12:53:29] radial=109.2° (crudo 109.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:43 12:53:31] radial=109.4° (crudo 109.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:44 12:53:32] radial=109.8° (crudo 109.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[06:45 12:53:33] radial=109.2° (crudo 109.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:46 12:53:34] radial=109.1° (crudo 109.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:47 12:53:35] radial=109.7° (crudo 109.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:48 12:53:36] radial=109.5° (crudo 109.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:50 12:53:37] radial=108.8° (crudo 108.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:51 12:53:39] radial=109.5° (crudo 109.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:52 12:53:40] radial=109.4° (crudo 109.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:53 12:53:41] radial=109.2° (crudo 109.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:54 12:53:42] radial=108.9° (crudo 108.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:55 12:53:43] radial=108.8° (crudo 108.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:56 12:53:44] radial=109.2° (crudo 109.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[06:58 12:53:46] radial=108.9° (crudo 108.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[06:59 12:53:47] radial=109.0° (crudo 109.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[07:00 12:53:48] radial=108.5° (crudo 108.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:01 12:53:49] radial=109.5° (crudo 109.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:02 12:53:50] radial=109.6° (crudo 109.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:03 12:53:51] radial=109.1° (crudo 109.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:03 12:53:51] [calidad 60 s] consistencia media 1.00 (min 0.98) | radial crudo medio 110.0° | dispersion ±0.8° | segundos validos 53/53 | ident: pico/ruido 27.6 (ruido 8.5e-06, pico 2.3e-04)
+[07:05 12:53:53] radial=109.1° (crudo 109.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:06 12:53:54] radial=109.0° (crudo 109.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[07:07 12:53:55] radial=109.4° (crudo 109.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:08 12:53:56] radial=108.3° (crudo 108.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:09 12:53:57] radial=109.0° (crudo 109.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:10 12:53:58] radial=108.7° (crudo 108.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:11 12:53:59] radial=108.4° (crudo 108.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:12 12:54:00] radial=109.0° (crudo 109.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:13 12:54:01] radial=108.4° (crudo 108.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:14 12:54:02] radial=107.1° (crudo 107.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[07:15 12:54:03] radial=109.1° (crudo 109.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:17 12:54:05] radial=109.4° (crudo 109.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:18 12:54:06] radial=107.2° (crudo 107.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:19 12:54:07] radial=108.7° (crudo 108.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:20 12:54:08] radial=108.2° (crudo 108.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:21 12:54:09] radial=108.9° (crudo 108.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:22 12:54:10] radial=107.5° (crudo 107.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:24 12:54:12] radial=108.1° (crudo 108.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:25 12:54:13] radial=108.0° (crudo 108.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:26 12:54:14] radial=107.6° (crudo 107.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:27 12:54:15] radial=108.0° (crudo 108.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:28 12:54:16] radial=107.4° (crudo 107.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:29 12:54:17] radial=107.5° (crudo 107.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[07:31 12:54:19] radial=107.0° (crudo 107.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:32 12:54:20] radial=107.1° (crudo 107.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:33 12:54:21] radial=108.2° (crudo 108.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:34 12:54:22] radial=107.9° (crudo 107.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:35 12:54:23] radial=107.9° (crudo 107.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:36 12:54:24] radial=107.6° (crudo 107.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[07:38 12:54:26] radial=106.9° (crudo 106.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:39 12:54:27] radial=107.7° (crudo 107.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:40 12:54:28] radial=107.7° (crudo 107.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:41 12:54:29] radial=108.4° (crudo 108.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:42 12:54:30] radial=107.5° (crudo 107.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:43 12:54:31] radial=108.5° (crudo 108.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[07:45 12:54:33] radial=108.5° (crudo 108.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:46 12:54:34] radial=107.9° (crudo 107.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:47 12:54:35] radial=108.3° (crudo 108.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:48 12:54:36] radial=107.1° (crudo 107.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:49 12:54:37] radial=107.4° (crudo 107.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:50 12:54:38] radial=108.3° (crudo 108.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:51 12:54:39] radial=107.5° (crudo 107.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:52 12:54:40] radial=106.8° (crudo 106.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:54 12:54:42] radial=107.3° (crudo 107.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:55 12:54:43] radial=107.2° (crudo 107.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:56 12:54:44] radial=107.2° (crudo 107.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[07:57 12:54:45] radial=106.7° (crudo 106.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[07:58 12:54:46] radial=107.3° (crudo 107.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[07:59 12:54:47] radial=107.7° (crudo 107.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:01 12:54:49] radial=108.5° (crudo 108.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:02 12:54:50] radial=107.8° (crudo 107.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:03 12:54:51] radial=107.7° (crudo 107.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:04 12:54:52] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:04 12:54:52] [calidad 60 s] consistencia media 1.00 (min 1.00) | radial crudo medio 107.9° | dispersion ±0.7° | segundos validos 53/53 | ident: pico/ruido 24.8 (ruido 9.8e-06, pico 2.4e-04)
+[08:05 12:54:53] radial=107.8° (crudo 107.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:06 12:54:54] radial=107.7° (crudo 107.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[08:08 12:54:56] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:09 12:54:57] radial=107.6° (crudo 107.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:10 12:54:58] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:11 12:54:59] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:12 12:55:00] radial=106.0° (crudo 106.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:13 12:55:01] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[08:15 12:55:03] radial=105.8° (crudo 105.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:16 12:55:04] radial=106.0° (crudo 106.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:17 12:55:05] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:18 12:55:06] radial=105.6° (crudo 105.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:19 12:55:07] radial=106.4° (crudo 106.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:20 12:55:08] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:22 12:55:10] radial=105.7° (crudo 105.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:23 12:55:11] radial=106.2° (crudo 106.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:24 12:55:12] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:25 12:55:13] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:26 12:55:14] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:27 12:55:15] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:29 12:55:17] radial=106.0° (crudo 106.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[08:30 12:55:18] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:31 12:55:19] radial=105.5° (crudo 105.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:32 12:55:20] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:33 12:55:21] radial=105.6° (crudo 105.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:34 12:55:22] radial=106.2° (crudo 106.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:35 12:55:23] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:36 12:55:24] radial=105.1° (crudo 105.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[08:37 12:55:25] radial=106.0° (crudo 106.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:39 12:55:27] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:40 12:55:28] radial=105.2° (crudo 105.2°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[08:41 12:55:29] radial=106.9° (crudo 106.9°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[08:42 12:55:30] radial=103.4° (crudo 103.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:43 12:55:31] radial=105.4° (crudo 105.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:44 12:55:32] radial=106.4° (crudo 106.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[08:45 12:55:33] radial=104.5° (crudo 104.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:46 12:55:34] radial=105.3° (crudo 105.3°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:48 12:55:36] radial=105.9° (crudo 105.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:49 12:55:37] radial=104.8° (crudo 104.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:50 12:55:38] radial=105.4° (crudo 105.4°) cons=0.99 curso=0° -> TO dev=-1.00 | ID BOG
+[08:51 12:55:39] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:52 12:55:40] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:53 12:55:41] radial=105.7° (crudo 105.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:55 12:55:43] radial=105.8° (crudo 105.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:56 12:55:44] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[08:57 12:55:45] radial=105.4° (crudo 105.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[08:58 12:55:46] radial=107.6° (crudo 107.6°) cons=0.98 curso=0° -> TO dev=-1.00 | ID BOG
+[08:59 12:55:47] radial=107.6° (crudo 101.9°) cons=0.97 curso=0° -> TO dev=-1.00 [salto descartado] | ID BOG
+[Ident] descartado: NEEMTM -. . . -- - -- (9 tonos)
+[09:00 12:55:48] radial=105.6° (crudo 105.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:01 12:55:49] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:02 12:55:50] radial=105.4° (crudo 105.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:04 12:55:52] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:05 12:55:53] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:05 12:55:53] [calidad 60 s] consistencia media 1.00 (min 0.97) | radial crudo medio 105.8° | dispersion ±1.0° | segundos validos 53/53 | ident: pico/ruido 45.5 (ruido 1.1e-05, pico 5.1e-04)
+[09:06 12:55:54] radial=104.4° (crudo 104.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:07 12:55:55] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] descartado: TITEEEIE - .. - . . . .. . (10 tonos)
+[Panel] Curso: 0°
+[09:08 12:55:56] radial=106.6° (crudo 106.6°) cons=0.98 curso=0° -> TO dev=-1.00 | ID BOG
+[09:10 12:55:57] radial=103.6° (crudo 103.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:10 12:55:58] radial=103.6° (crudo 108.8°) cons=1.00 curso=0° -> TO dev=-1.00 [salto descartado] | ID BOG
+[09:12 12:56:00] radial=104.8° (crudo 104.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:13 12:56:01] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:14 12:56:02] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] descartado: TIITTG - .. .. - - --. (10 tonos)
+[09:15 12:56:03] radial=105.2° (crudo 105.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:16 12:56:04] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:17 12:56:05] radial=104.8° (crudo 104.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:19 12:56:07] radial=104.5° (crudo 104.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:20 12:56:08] radial=104.8° (crudo 104.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:21 12:56:09] radial=104.8° (crudo 104.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:22 12:56:10] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:23 12:56:11] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:24 12:56:12] radial=104.4° (crudo 104.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:25 12:56:13] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:27 12:56:15] radial=104.4° (crudo 104.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:28 12:56:16] radial=103.6° (crudo 103.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:29 12:56:17] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[09:30 12:56:18] radial=104.4° (crudo 104.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:31 12:56:19] radial=104.0° (crudo 104.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:32 12:56:20] radial=103.9° (crudo 103.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:34 12:56:22] radial=104.8° (crudo 104.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:35 12:56:23] radial=104.2° (crudo 104.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:36 12:56:24] radial=104.0° (crudo 104.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[09:37 12:56:25] radial=103.7° (crudo 103.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:38 12:56:26] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:39 12:56:27] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:41 12:56:29] radial=103.6° (crudo 103.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:42 12:56:30] radial=103.8° (crudo 103.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:43 12:56:31] radial=103.6° (crudo 103.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:44 12:56:32] radial=104.4° (crudo 104.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[09:45 12:56:33] radial=104.1° (crudo 104.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:46 12:56:34] radial=104.0° (crudo 104.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:47 12:56:35] radial=104.7° (crudo 104.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:48 12:56:36] radial=104.6° (crudo 104.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:50 12:56:38] radial=104.5° (crudo 104.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:51 12:56:39] radial=104.4° (crudo 104.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:52 12:56:40] radial=104.6° (crudo 104.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:53 12:56:41] radial=104.5° (crudo 104.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:54 12:56:42] radial=103.9° (crudo 103.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:55 12:56:43] radial=104.9° (crudo 104.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:56 12:56:44] radial=103.9° (crudo 103.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[09:58 12:56:46] radial=105.1° (crudo 105.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[09:59 12:56:47] radial=105.1° (crudo 105.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[10:00 12:56:48] radial=105.9° (crudo 105.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:01 12:56:49] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[10:02 12:56:50] radial=104.5° (crudo 104.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:04 12:56:51] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:05 12:56:53] radial=105.0° (crudo 105.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:06 12:56:54] radial=105.4° (crudo 105.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:06 12:56:54] [calidad 60 s] consistencia media 1.00 (min 0.98) | radial crudo medio 104.5° | dispersion ±0.8° | segundos validos 53/53 | ident: pico/ruido 21.5 (ruido 1.2e-05, pico 2.6e-04)
+[10:07 12:56:55] radial=104.6° (crudo 104.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[Panel] Curso: 0°
+[10:08 12:56:56] radial=105.9° (crudo 105.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:09 12:56:57] radial=105.3° (crudo 105.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:10 12:56:58] radial=106.3° (crudo 106.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:12 12:57:00] radial=105.3° (crudo 105.3°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[10:13 12:57:01] radial=106.1° (crudo 106.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:14 12:57:02] radial=106.6° (crudo 106.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[10:15 12:57:03] radial=106.5° (crudo 106.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:16 12:57:04] radial=107.2° (crudo 107.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[10:17 12:57:05] radial=107.0° (crudo 107.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:19 12:57:07] radial=107.8° (crudo 107.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:20 12:57:08] radial=106.4° (crudo 106.4°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:21 12:57:09] radial=107.9° (crudo 107.9°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:22 12:57:10] radial=107.2° (crudo 107.2°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[10:23 12:57:11] radial=107.6° (crudo 107.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:24 12:57:12] radial=107.5° (crudo 107.5°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:25 12:57:13] radial=109.0° (crudo 109.0°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:26 12:57:14] radial=107.7° (crudo 107.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[10:27 12:57:15] radial=109.8° (crudo 109.8°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:29 12:57:17] radial=109.6° (crudo 109.6°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Ident] BOG  -... --- --.  (10 tonos)
+[10:30 12:57:18] radial=111.1° (crudo 111.1°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[10:31 12:57:19] radial=110.7° (crudo 110.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+[Panel] Curso: 0°
+[10:32 12:57:20] radial=111.7° (crudo 111.7°) cons=1.00 curso=0° -> TO dev=-1.00 | ID BOG
+Deteniendo...
+
+(gr310) C:\Users\santi\Downloads>

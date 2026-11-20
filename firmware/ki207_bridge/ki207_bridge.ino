@@ -32,25 +32,25 @@ Adafruit_MCP4725 dac_FROMTO;
 #define CH_FROMTO 2
 
 // ----- Calibracion CDI -----
-const int centro_CDI = 2067;
+const int centro_CDI = 2043;
 const int paso_CDI = 19;
 const int marcas_CDI = 5;
 const int fondoEscala_CDI = paso_CDI * marcas_CDI;   // 95 cuentas = 10 grados
 
 // ----- Calibracion GS (simulado) -----
-const int centro_GS = 2053;
-const int paso_GS = 19;
+const int centro_GS = 2047;
+const int paso_GS = 18;
 const int marcas_GS = 5;
 const int fondoEscala_GS = paso_GS * marcas_GS;      // 95 cuentas
-const float FACTOR_GS = 0.5;   // que tanto del DEV del CDI se refleja en GS (ajustable)
+const float FACTOR_GS = 1;   // que tanto del DEV del CDI se refleja en GS (ajustable)
 
 // ----- FROMTO -----
-const int centro_FROMTO = 2045;
-const int desviacion_FROMTO = 100;
-const int disparo_ms = 2;
+const int centro_FROMTO = 2050;
+const int desviacion_FROMTO = -100;
+const int disparo_ms = 5;
 
 // ----- Movimiento suave CDI/GS -----
-const int paso_vuelo_ms = 25;   // cada cuanto avanza 1 cuenta hacia el objetivo
+const int paso_vuelo_ms = 15;   // cada cuanto avanza 1 cuenta hacia el objetivo
 
 // ----- Timeout de datos -----
 const unsigned long TIMEOUT_MS = 3000;

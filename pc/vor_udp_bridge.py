@@ -213,6 +213,13 @@ def main():
     ap.add_argument("--ident-hold-s", type=float, default=60.0,
                     help="segundos que se mantiene el ident en el panel tras decodificarlo")
     ap.add_argument("--min-consistency", type=float, default=0.6)
+    ap.add_argument("--window-s", type=float, default=1.0,
+                    help="duracion (s) de cada ventana de promediado; menor = aguja mas rapida pero mas ruido")
+    ap.add_argument("--jump-deg", type=float, default=4.0,
+                    help="filtro de saltos: una ventana que se aleja mas de estos grados del valor mostrado se "
+                         "descarta salvo que se repita; 0 = sin filtro")
+    ap.add_argument("--jump-n", type=int, default=3,
+                    help="ventanas seguidas (coherentes entre si) necesarias para aceptar un salto como cambio real")
     ap.add_argument("--settle-s", type=float, default=6.0,
                     help="segundos con FLAG=OFF tras cambiar frecuencia (PLL enganchando)")
     args = ap.parse_args()
@@ -251,6 +258,13 @@ def main():
 
     ssin = scos = 0.0
     n = 0
+    t_inicio = time.time()
+
+    def reloj():
+        # tiempo transcurrido desde que arranco el puente (mm:ss) y hora del PC
+        seg = int(time.time() - t_inicio)
+        return f"[{seg // 60:02d}:{seg % 60:02d} {time.strftime('%H:%M:%S')}]"
+
     t_ventana = time.time()
     t_cambio = time.time()
     ultima_freq = None
@@ -258,7 +272,9 @@ def main():
     ultima_cons = 0.0
     t_ultima_ok = 0.0
     ema = None                      # vector medio suavizado (seno, coseno)
-    alfa = 1.0 if args.smooth_s <= 0 else 1.0 - math.exp(-1.0 / args.smooth_s)
+    alfa = 1.0 if args.smooth_s <= 0 else 1.0 - math.exp(-args.window_s / args.smooth_s)
+    salto_cand = None               # radial de la ventana que se aleja del valor mostrado
+    salto_cuenta = 0                # cuantas ventanas seguidas coinciden con ese candidato
     radial_crudo = 0.0
     # estadisticas de calidad de la senal (para comparar antenas/ganancias con numeros)
     st_cons, st_sin, st_cos, st_ok, st_tot = [], 0.0, 0.0, 0, 0
@@ -295,7 +311,7 @@ def main():
                 t_ventana = time.time()
 
             ahora = time.time()
-            if ahora - t_ventana >= 1.0:
+            if ahora - t_ventana >= args.window_s:
                 with estado.lock:
                     curso = estado.curso
                 if n >= 5:
@@ -307,19 +323,38 @@ def main():
                 asentando = (ahora - t_cambio) < args.settle_s
                 if asentando:
                     ema = None
+                    salto_cand, salto_cuenta = None, 0
                     linea = f"DEV,0.000,FLAG,OFF,RAD,{radial:.1f},CONS,{consist:.2f}\n"
                     estado_txt = "OFF (enganchando tras cambio de frecuencia)"
                 elif n >= 5 and consist >= args.min_consistency:
                     # suavizado: media exponencial del vector (los segundos poco consistentes pesan menos)
                     vs, vc = ssin / n, scos / n
+                    # filtro de saltos: sin retardo para variaciones pequenas; una ventana que se aleja
+                    # mas de --jump-deg del valor mostrado se descarta, a menos que las siguientes
+                    # (--jump-n seguidas) coincidan entre si: entonces es un cambio real.
+                    descartada = False
                     if ema is None:
                         ema = (vs, vc)
                     else:
-                        ema = (ema[0] + alfa * (vs - ema[0]), ema[1] + alfa * (vc - ema[1]))
+                        mostrado = math.degrees(math.atan2(ema[0], ema[1])) % 360.0
+                        if args.jump_deg > 0 and abs(angle_diff(radial_crudo, mostrado)) > args.jump_deg:
+                            if salto_cand is not None and abs(angle_diff(radial_crudo, salto_cand)) <= args.jump_deg:
+                                salto_cuenta += 1
+                            else:
+                                salto_cuenta = 1
+                            salto_cand = radial_crudo
+                            if salto_cuenta >= args.jump_n:
+                                ema = (vs, vc)              # cambio real: se acepta de inmediato
+                                salto_cand, salto_cuenta = None, 0
+                            else:
+                                descartada = True           # salto aislado: se conserva el valor mostrado
+                        else:
+                            salto_cand, salto_cuenta = None, 0
+                            ema = (ema[0] + alfa * (vs - ema[0]), ema[1] + alfa * (vc - ema[1]))
                     radial = math.degrees(math.atan2(ema[0], ema[1])) % 360.0
                     dev, flag = calcular_cdi(radial, curso, args.full_scale_deg, args.invert)
                     linea = f"DEV,{dev:.3f},FLAG,{flag},RAD,{radial:.1f},CONS,{consist:.2f}\n"
-                    estado_txt = f"{flag} dev={dev:+.2f}"
+                    estado_txt = f"{flag} dev={dev:+.2f}" + (" [salto descartado]" if descartada else "")
                     ultima_linea_ok = (radial, flag)
                     ultima_cons = consist
                     t_ultima_ok = ahora
@@ -333,6 +368,7 @@ def main():
                 else:
                     if ahora - t_ultima_ok > 5.0:
                         ema = None
+                        salto_cand, salto_cuenta = None, 0
                     linea = f"DEV,0.000,FLAG,OFF,RAD,{radial:.1f},CONS,{consist:.2f}\n"
                     estado_txt = "OFF (sin señal / baja consistencia)"
                 with estado.lock:
@@ -354,7 +390,7 @@ def main():
                 if estado.modo == "ADSB":
                     estado_txt = "ADS-B (VOR en pausa)"
                 else:
-                    print(f"  radial={radial:5.1f}° (crudo {radial_crudo:5.1f}°) cons={consist:.2f} curso={curso:.0f}° -> {estado_txt}")
+                    print(f"{reloj()} radial={radial:5.1f}° (crudo {radial_crudo:5.1f}°) cons={consist:.2f} curso={curso:.0f}° -> {estado_txt}")
                 if not asentando and estado.modo == "VOR":
                     st_tot += 1
                     if n >= 5:
@@ -372,11 +408,11 @@ def main():
                         R = max(math.hypot(st_sin, st_cos) / m, 1e-9)
                         disp = math.degrees(math.sqrt(max(-2.0 * math.log(min(R, 1.0)), 0.0)))
                         rmed = math.degrees(math.atan2(st_sin, st_cos)) % 360.0
-                        print(f"  [calidad {args.stats_s:.0f} s] consistencia media {sum(st_cons)/m:.2f} (min {min(st_cons):.2f}) | "
+                        print(f"{reloj()} [calidad {args.stats_s:.0f} s] consistencia media {sum(st_cons)/m:.2f} (min {min(st_cons):.2f}) | "
                               f"radial crudo medio {rmed:.1f}° | dispersion ±{disp:.1f}° | segundos validos {st_ok}/{st_tot}"
                               + ("" if args.no_ident else f" | ident: pico/ruido {estado.ident_ratio:.1f} (ruido {estado.ident_ruido:.1e}, pico {estado.ident_pico:.1e})"))
                     else:
-                        print(f"  [calidad {args.stats_s:.0f} s] sin datos del decodificador")
+                        print(f"{reloj()} [calidad {args.stats_s:.0f} s] sin datos del decodificador")
                     st_cons, st_sin, st_cos, st_ok, st_tot = [], 0.0, 0.0, 0, 0
                     t_stats = ahora
                 ssin = scos = 0.0

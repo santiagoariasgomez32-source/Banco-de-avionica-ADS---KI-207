@@ -8,7 +8,7 @@ decodificador basado en PLL en GNU Radio y lo muestra en un panel NAV/COM (ESP32
 indicador Bendix/King KI-207 real. Con el mismo receptor, en otro modo, muestra tráfico
 ADS-B con alertas TA/RA simuladas.
 
-**Versión:** v1.0-revision (octubre de 2026). Es la versión entregada a revisión; puede cambiar en la entrega final.
+**Versión:** v1.1 (noviembre de 2026).
 
 ## Arquitectura
 
@@ -67,6 +67,6 @@ El procedimiento detallado está en el instructivo del documento de grado.
 
 ## Aviso
 
-- El offset de calibración (270°) corresponde al sitio donde se hicieron las pruebas y debe recalcularse si cambia la posición de la antena.
+- El offset de calibración (263.9°) corresponde al sitio donde se hicieron las pruebas y debe recalcularse si cambia la posición de la antena.
 - Proyecto académico. No apto para navegación real.
 
